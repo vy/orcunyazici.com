@@ -164,6 +164,10 @@ footer ul {
   display: block;
 }
 
+.project a:hover img {
+  opacity: .4;
+}
+
 .project-page {
   padding: var(--element-padding);
   text-align: center;
