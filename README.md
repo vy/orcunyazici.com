@@ -18,6 +18,6 @@ $ git log -5
 $ git status
 $ git add FILENAME
 $ git commit -a -m "MESSAGE"
-$ git push origin master
-$ git pull origin master
+$ git push origin gh-pages
+$ git pull origin gh-pages
 ```
