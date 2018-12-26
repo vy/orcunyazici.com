@@ -124,7 +124,6 @@ footer ul {
 }
 
 .projects ul li {
-  width: calc(50% - 1px);
   text-align: center;
   margin-right: 1px;
   margin-bottom: 1px;
