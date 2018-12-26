@@ -110,6 +110,7 @@ footer ul {
 .projects ul {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .projects header {
