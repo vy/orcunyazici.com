@@ -1,0 +1,182 @@
+:root {
+  --brand: #f75a56;
+  --element-padding: 1.5rem;
+  --block-margin: 3rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+.site-menu {
+  display: flex;
+  padding: var(--element-padding);
+  background-color: var(--brand);
+  color: white;
+}
+
+.site-menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.site-menu a:hover,
+.site-menu a:focus,
+.site-menu a:active {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+nav ul li:not(:last-child) {
+  margin-right: 1rem;
+}
+
+nav ul a {
+  display: inline-block;
+}
+
+.site-menu nav {
+  width: 30%;
+}
+
+.title {
+  width: 40%;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('index-banner.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-box-pack: center;
+  height: 700px;
+}
+
+.banner header {
+  font-size: 3rem;
+  padding: 1rem;
+}
+
+footer {
+  padding: var(--element-padding);
+  text-align: center;
+}
+
+footer ul {
+  justify-content: center;
+}
+
+.contact a {
+  width: 100px;
+}
+
+.copyright {
+  text-align: center;
+}
+
+.projects {
+  position: relative;
+  padding: var(--element-padding);
+  margin-top: var(--block-margin);
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.projects a:hover p {
+  display: block;
+}
+
+.projects ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.projects header {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.projects ul li {
+  width: calc(50% - 1px);
+  text-align: center;
+  margin-right: 1px;
+  margin-bottom: 1px;
+}
+
+.projects img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.projects .caption {
+  display: none;
+  position: absolute;
+  color: white;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.project {
+  position: relative;
+}
+
+.project a {
+  display: inline-block;
+  height: 100%;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.project a:hover {
+  background-color: var(--brand);
+}
+
+.project a:hover .overlay {
+  display: block;
+}
+
+.project-page {
+  padding: var(--element-padding);
+  text-align: center;
+}
+
+.project-page img {
+  max-width: 100%;
+  width: 70%;
+  display: inline-block;
+}
+
+.project-content {
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+}
