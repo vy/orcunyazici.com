@@ -2,6 +2,8 @@
   --brand: #f75a56;
   --element-padding: 1.5rem;
   --block-margin: 3rem;
+  --banner-image-height: 700px;
+  --header-menu-height: 85px;
 }
 
 html {
@@ -10,13 +12,29 @@ html {
 
 body {
   margin: 0;
+  position: relative;
 }
 
 .site-menu {
   display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   padding: var(--element-padding);
   background-color: var(--brand);
   color: white;
+  transition: background-color 200ms linear;
+  z-index: 100;
+}
+
+.site-menu.scrolled {
+  background-color: white;
+  color: black;
+}
+
+.site-menu.scrolled a {
+  color: black;
 }
 
 .site-menu a {
@@ -62,6 +80,9 @@ nav ul a {
 
 .banner {
   display: flex;
+  position: fixed;
+  top: calc(var(--header-menu-height));
+  left: 0;
   justify-content: center;
   align-items: center;
   background-image: url('index-banner.jpg');
@@ -70,6 +91,7 @@ nav ul a {
   background-size: cover;
   -webkit-box-pack: center;
   height: 700px;
+  width: 100%;
 }
 
 .banner header {
@@ -96,11 +118,11 @@ footer ul {
 
 .projects {
   position: relative;
-  padding: var(--element-padding);
-  margin-top: var(--block-margin);
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: calc(var(--element-padding) + var(--header-menu-height) + var(--banner-image-height));
+  padding-left: var(--element-padding);
+  padding-right: var(--element-padding);
+  padding-top: var(--header-menu-height);
+  background-color: white;
 }
 
 .projects a:hover p {
@@ -111,6 +133,7 @@ footer ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 1rem auto;
 }
 
 .projects header {
@@ -175,12 +198,27 @@ footer ul {
 
 .project-page img {
   max-width: 100%;
-  width: 70%;
   display: inline-block;
 }
 
-.project-content {
-  width: 50%;
-  margin-right: auto;
-  margin-left: auto;
+footer {
+  margin-top: var(--block-margin);
+  padding: var(--element-padding);
+  height: 100px;
+}
+
+@media (min-width: 750px) {
+  .project-page img {
+    width: 70%;
+  }
+
+  .projects ul {
+    width: 70%;
+  }
+
+  .project-content {
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
