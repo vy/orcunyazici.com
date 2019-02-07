@@ -1,93 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="author" content="Orçun Yazıcı">
-	<meta name="email" content="orcun.yazici@gmail.com">
-	<title>Orçun Yazıcı</title>
-	<link rel="stylesheet" href="/styles.css">
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Orçun Yazıcı">
+    <meta name="email" content="orcun.yazici@gmail.com">
+
+    <title>Orçun Yazıcı</title>
+
+    <link rel="preload" as="font" href="/font/Oswald-ExtraLight-subset.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="/font/Oswald-SemiBold-subset.woff2" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="/styles.css">
+
+    <!-- Font loading -->
+    <script>
+      function loadFonts() {
+        if ("fonts" in document) {
+          var font = new FontFace(
+            "Oswald",
+            "url(/font/Oswald-ExtraLight-subset.woff2) format('woff2'), url(/font/Oswald-ExtraLight-subset.woff) format('woff')",
+            { weight: "200" }
+          );
+
+          var fontBold = new FontFace(
+            "Oswald",
+            "url(/font/Oswald-SemiBold-subset.woff2) format('woff2'), url(/font/Oswald-SemiBold-subset.woff) format('woff')",
+            { weight: "600" }
+          );
+
+          Promise.all([
+            font.load(),
+            fontBold.load()
+          ]).then(function (loadedFonts) {
+
+            // Render them at the same time
+            loadedFonts.forEach(function (font) {
+              document.fonts.add(font);
+            });
+          });
+        }
+      }
+
+      if (
+        ("matchMedia" in window && window.matchMedia("(prefers-reduced-motion: reduce)").matches) ||
+        (navigator.connection && navigator.connection.saveData) ||
+        (navigator.connection && (navigator.connection.effectiveType === "slow-2g" || navigator.connection.effectiveType === "2g"))
+      ) {
+        // do nothing
+      } else {
+        loadFonts();
+      }
+    </script>
+  </head>
 <body>
 
-	<header id="header">
-		<nav>
-			<ul>
-				<li><strong>Projects</strong></li>
-				<li><a href="/about/">About</a></li>
-			</ul>
-		</nav>
-		<div class="title">Orçun Yazıcı</div>
-	</header>
+  <header class="header" id="header">
+    <nav class="header__nav">
+      <ul class="nav-list">
+        <li class="nav-list__item"><strong>Projects</strong></li>
+        <li class="nav-list__item"><a class="nav-list__link" href="/about/">About</a></li>
+      </ul>
+    </nav>
 
-	<main>
+    <div class="header__title">Orçun Yazıcı</div>
+  </header>
 
-		<section id="banner">
-			<span>Orçun Yazıcı</span>
-		</section>
+  <section class="masthead">
+    <span class="masthead__title">Orçun Yazıcı</span>
+  </section>
 
-		<section id="projects">
+  <main>
+    <div class="constrain">
+      <ul class="projects">
+        <li class="project">
+          <a href="/project-1/" class="project__link">
+            <img src="/project-1/cover.jpg" class="project__img" alt="project">
+            <span class="project__title">Project 1</span>
+          </a>
+        </li>
+        <li class="project">
+          <a href="/project-2/" class="project__link">
+            <img src="/project-2/cover.jpg" class="project__img" alt="project">
+            <span class="project__title">Project 2</span>
+          </a>
+        </li>
+        <li class="project">
+          <a href="/project-3/" class="project__link">
+            <img src="/project-2/cover.jpg" class="project__img" alt="project">
+            <span class="project__title">Project 3</span>
+          </a>
+        </li>
+        <li class="project">
+          <a href="/project-4/" class="project__link">
+            <img src="/project-2/cover.jpg" class="project__img" alt="project">
+            <span class="project__title">Project 4</span>
+          </a>
+        </li>
+        <li class="project">
+          <a href="/project-5/" class="project__link">
+            <img src="/project-2/cover.jpg" class="project__img" alt="project">
+            <span class="project__title">Project 5</span>
+          </a>
+        </li>
+        <li class="project">
+          <a href="/project-6/" class="project__link">
+            <img src="/project-2/cover.jpg" class="project__img" alt="project">
+            <span class="project__title">Project 6</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </main>
 
-			<div class="project">
-				<a href="/project-1/">
-					<div>
-						<img src="/project-1/cover.jpg"/>
-					<span>Project 1</span>
-					</div>
-				</a>
-			</div>
+  <footer class="footer">
+    <nav class="footer__nav">
+      <ul class="nav-list">
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="mailto:orcun.yazici@gmail.com">E-Mail</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="https://www.facebook.com/orcunnyazici" target="_blank">Facebook</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="https://instagram.com/orcunnyazici" target="_blank">Instagram</a>
+        </li>
+      </ul>
+    </nav>
 
-			<div class="project">
-				<a href="/project-2/">
-					<img src="/project-2/cover.jpg"/>
-					<span>Project 2</span>
-				</a>
-			</div>
-
-			<div class="project">
-				<a href="/project-3/">
-					<img src="/project-2/cover.jpg"/>
-					<span>Project 3</span>
-				</a>
-			</div>
-
-			<div class="project">
-				<a href="/project-4/">
-					<img src="/project-2/cover.jpg"/>
-					<span>Project 4</span>
-				</a>
-			</div>
-
-			<div class="project">
-				<a href="/project-5/">
-					<img src="/project-2/cover.jpg"/>
-					<span>Project 5</span>
-				</a>
-			</div>
-
-			<div class="project">
-				<a href="/project-6/">
-					<img src="/project-2/cover.jpg"/>
-					<span>Project 6</span>
-				</a>
-			</div>
-
-		</section>
-
-	</main>
-
-	<footer id="footer">
-		<nav>
-			<ul>
-                <li><a href="mailto:orcun.yazici@gmail.com">E-Mail</a></li>
-                <li><a href="https://www.facebook.com/orcunnyazici" target="_blank">Facebook</a></li>
-				<li><a href="https://instagram.com/orcunnyazici" target="_blank">Instagram</a>
-			</ul>
-		</nav>
-		<div class="copyright">
-			Copyright &copy; 2018 Orçun Yazıcı.<br/>
-			All rights reserved.
-		</div>
-	</footer>
+    <div class="footer__copyright">
+      Copyright &copy; 2018 Orçun Yazıcı.<br/>
+      All rights reserved.
+    </div>
+  </footer>
 
 </body>
 </html>
