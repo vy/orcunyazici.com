@@ -39,7 +39,7 @@ body {
   line-height: 1.5;
   font-size: 1rem;
   font-weight: 200;
-  font-family: Oswald-ExtraLight, Arial, Helvetica, sans-serif
+  font-family: Oswald, Arial, Helvetica, sans-serif
 }
 
 b, strong {
@@ -109,7 +109,7 @@ main {
 }
 
 .nav-list__link {
-  color: #000;
+  color: #fff;
   text-decoration: none;
   position: relative;
 }
@@ -119,7 +119,7 @@ main {
   bottom: 0;
   left: 0;
   transition: width .25s ease-in-out;
-  background-color: #fff;
+  background-color: #000;
   height: 1px;
   width: 0;
   content: '';
@@ -189,7 +189,7 @@ main {
 
 .masthead__title {
   display: block;
-  background-color: rgba(255,255,255,.25);
+  background-color: rgba(255,255,255,.75);
   width: 100%;
   text-align: center;
   text-transform: uppercase;
@@ -220,18 +220,21 @@ main {
   display: flex;
 }
 
+/* from 600px (600/16) and up */
 @media (min-width: 37.5em) {
   .project {
     width: calc(100% / 2);
   }
 }
 
+/* from 900px and up */
 @media (min-width: 56.25em) {
   .project {
     width: calc(100% / 3);
   }
 }
 
+/* from 1200px and up */
 @media (min-width: 75em) {
   .project {
     width: calc(100% / 4);
@@ -297,6 +300,7 @@ main {
   display: flex;
   background-color: #ff5348;
   padding: 1.5rem 1rem;
+  color: #fff;
 
   align-items: center;
 }
@@ -312,6 +316,7 @@ main {
 }
 
 
+/* until 599px */
 @media (max-width: 37.4375em) {
   .footer {
     flex-wrap: wrap;
