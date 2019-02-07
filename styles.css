@@ -49,14 +49,27 @@ b, strong {
 img {
   border-style: none;
   vertical-align: middle;
+  max-width: 100%;
+  height: auto;
 }
 
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  #MAIN
+\*---------------------------------------------------------------------------*/
 main {
   display: block;
   position: relative;
   z-index: 1;
   margin-top: 40rem;
   background-color: #fff;
+}
+
+.project-page {
+  margin-top: 4.5rem;
 }
 
 
@@ -260,11 +273,6 @@ main {
 
 .project__link:hover .project__title {
   opacity: 1;
-}
-
-.project__img {
-  max-width: 100%;
-  height: auto;
 }
 
 @supports (display: grid) {
