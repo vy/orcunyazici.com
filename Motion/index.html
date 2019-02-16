@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="Orçun Yazıcı">
+  <meta name="email" content="orcun.yazici@gmail.com">
+
+  <title>Orçun Yazıcı | Project 1</title>
+
+  <link rel="preload" as="font" href="/font/Oswald-ExtraLight-subset.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/font/Oswald-SemiBold-subset.woff2" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="/styles.css">
+
+  <!-- Font loading -->
+  <script>
+    function loadFonts() {
+      if ("fonts" in document) {
+        var font = new FontFace(
+          "Oswald",
+          "url(/font/Oswald-ExtraLight-subset.woff2) format('woff2'), url(/font/Oswald-ExtraLight-subset.woff) format('woff')",
+          { weight: "200" }
+        );
+
+        var fontBold = new FontFace(
+          "Oswald",
+          "url(/font/Oswald-SemiBold-subset.woff2) format('woff2'), url(/font/Oswald-SemiBold-subset.woff) format('woff')",
+          { weight: "600" }
+        );
+
+        Promise.all([
+          font.load(),
+          fontBold.load()
+        ]).then(function (loadedFonts) {
+
+          // Render them at the same time
+          loadedFonts.forEach(function (font) {
+            document.fonts.add(font);
+          });
+        });
+      }
+    }
+
+    if (
+      ("matchMedia" in window && window.matchMedia("(prefers-reduced-motion: reduce)").matches) ||
+      (navigator.connection && navigator.connection.saveData) ||
+      (navigator.connection && (navigator.connection.effectiveType === "slow-2g" || navigator.connection.effectiveType === "2g"))
+    ) {
+      // do nothing
+    } else {
+      loadFonts();
+    }
+  </script>
+</head>
+
+<body>
+
+  <header class="header" id="header">
+    <nav class="header__nav">
+      <ul class="nav-list">
+        <li class="nav-list__item"><a class="nav-list__link" href="/">Projects</a></li>
+        <li class="nav-list__item"><a class="nav-list__link" href="/about/">About</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__title">Orçun Yazıcı</div>
+  </header>
+
+  <main class="project-page">
+    <div class="constrain">
+
+      <h1>Motion</h1>
+
+      <table>
+        <tr>
+          <td><strong>_semester</strong></td>
+          <td>METU / first year design studio</td>
+        </tr>
+        <tr>
+          <td><strong>_year</strong></td>
+          <td>2014</td>
+        </tr>
+        <tr>
+          <td><strong>_author</strong></td>
+          <td>Orçun Yazıcı</td>
+        </tr>
+      </table>
+
+      <p class="project-content">
+        “Motion” is a tectonic structure that analyses the relation between movement, time, the body
+        and the physical environment. It tries to capture the movements of a dancer to define a playground space.
+        It forms a complex system that operates as a whole.
+      </p>
+
+      <img src="diagram 1.jpg"/>
+
+      <img src="foto 1.jpg"/>
+
+      <img src="foto 2.jpg"/>
+
+      <img src="foto 3.jpg"/>
+
+      <img src="render motion.jpg"/>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <nav class="footer__nav">
+      <ul class="nav-list">
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="mailto:orcun.yazici@gmail.com">E-Mail</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="https://www.facebook.com/orcunnyazici" target="_blank">Facebook</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="https://instagram.com/orcunnyazici" target="_blank">Instagram</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="footer__copyright">
+      Copyright &copy; 2018-2019 Orçun Yazıcı.<br />
+      All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>

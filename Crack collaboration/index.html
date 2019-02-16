@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="Orçun Yazıcı">
+  <meta name="email" content="orcun.yazici@gmail.com">
+
+  <title>Orçun Yazıcı | Project 2</title>
+
+  <link rel="preload" as="font" href="/font/Oswald-ExtraLight-subset.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/font/Oswald-SemiBold-subset.woff2" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="/styles.css">
+
+  <!-- Font loading -->
+  <script>
+    function loadFonts() {
+      if ("fonts" in document) {
+        var font = new FontFace(
+          "Oswald",
+          "url(/font/Oswald-ExtraLight-subset.woff2) format('woff2'), url(/font/Oswald-ExtraLight-subset.woff) format('woff')",
+          { weight: "200" }
+        );
+
+        var fontBold = new FontFace(
+          "Oswald",
+          "url(/font/Oswald-SemiBold-subset.woff2) format('woff2'), url(/font/Oswald-SemiBold-subset.woff) format('woff')",
+          { weight: "600" }
+        );
+
+        Promise.all([
+          font.load(),
+          fontBold.load()
+        ]).then(function (loadedFonts) {
+
+          // Render them at the same time
+          loadedFonts.forEach(function (font) {
+            document.fonts.add(font);
+          });
+        });
+      }
+    }
+
+    if (
+      ("matchMedia" in window && window.matchMedia("(prefers-reduced-motion: reduce)").matches) ||
+      (navigator.connection && navigator.connection.saveData) ||
+      (navigator.connection && (navigator.connection.effectiveType === "slow-2g" || navigator.connection.effectiveType === "2g"))
+    ) {
+      // do nothing
+    } else {
+      loadFonts();
+    }
+  </script>
+</head>
+
+<body>
+
+  <header class="header" id="header">
+    <nav class="header__nav">
+      <ul class="nav-list">
+        <li class="nav-list__item"><a class="nav-list__link" href="/">Projects</a></li>
+        <li class="nav-list__item"><a class="nav-list__link" href="/about/">About</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__title">Orçun Yazıcı</div>
+  </header>
+
+  <main class="project-page">
+    <div class="constrain">
+
+      <h1>Crack /collaboration</h1>
+
+      <table>
+        <tr>
+          <td><strong>_semester</strong></td>
+          <td>METU / Generative Design Studio</td>
+        </tr>
+        <tr>
+          <td><strong>_year</strong></td>
+          <td>2017</td>
+        </tr>
+		<tr>
+          <td><strong>_location</strong></td>
+          <td>METU Architecture Faculty, Turkey</td>
+        </tr>
+        <tr>
+          <td><strong>_author</strong></td>
+          <td>Işınsu Tazıcı, Orçun Yazıcı</td>
+        </tr>
+      </table>
+
+      <p class="project-content">
+        METU Faculty of Architecture building* is organized around open and closed courtyards which we call
+		"seeds of the building". These architectural spaces arrange the functions around and they also
+		become densely used important places. "The Seed" is a project which has its own identity formed by
+		the tension between natural and manmade factors contributing to the unique character of the courtyard.
+		While affecting and arranging its environment, The Seed is also affected by its surrounding. It is
+		designed to celebrate the vivid architectural space. Design idea is also an interpretation of "seed".
+		It starts from a sphere and it is shaped by various factors such as wind, sunlight and human activity
+		of the site. <br />
+		<br />
+		
+		<i>*METU Faculty of Architecture building is awarded a grant by Getty Foundation through "Keeping It
+		Modern" initiative which focuses on the conservation of significant buildings of the 20th century.</i>
+      </p>
+	  
+      <img src="1_analysis.jpg"/>
+
+      <img src="2_photos.jpg"/>
+
+      <img src="3_process.jpg"/>
+	  
+      <img src="gif process.gif"/>
+
+      <img src="4_hor sections.jpg"/>
+
+      <img src="5_ver sections.jpg"/>   
+
+	  <img src="6_sections.jpg"/>
+
+	  <img src="7_render.jpg"/>
+	  
+	  <img src="gif genel 1.gif"/>
+
+	  <img src="gif genel 2.gif"/>
+
+	  <img src="gif genel 3.gif"/>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <nav class="footer__nav">
+      <ul class="nav-list">
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="mailto:orcun.yazici@gmail.com">E-Mail</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="https://www.facebook.com/orcunnyazici" target="_blank">Facebook</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="https://instagram.com/orcunnyazici" target="_blank">Instagram</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="footer__copyright">
+      Copyright &copy; 2018-2019 Orçun Yazıcı.<br />
+      All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>

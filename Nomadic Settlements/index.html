@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="Orçun Yazıcı">
+  <meta name="email" content="orcun.yazici@gmail.com">
+
+  <title>Orçun Yazıcı | Project 2</title>
+
+  <link rel="preload" as="font" href="/font/Oswald-ExtraLight-subset.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/font/Oswald-SemiBold-subset.woff2" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="/styles.css">
+
+  <!-- Font loading -->
+  <script>
+    function loadFonts() {
+      if ("fonts" in document) {
+        var font = new FontFace(
+          "Oswald",
+          "url(/font/Oswald-ExtraLight-subset.woff2) format('woff2'), url(/font/Oswald-ExtraLight-subset.woff) format('woff')",
+          { weight: "200" }
+        );
+
+        var fontBold = new FontFace(
+          "Oswald",
+          "url(/font/Oswald-SemiBold-subset.woff2) format('woff2'), url(/font/Oswald-SemiBold-subset.woff) format('woff')",
+          { weight: "600" }
+        );
+
+        Promise.all([
+          font.load(),
+          fontBold.load()
+        ]).then(function (loadedFonts) {
+
+          // Render them at the same time
+          loadedFonts.forEach(function (font) {
+            document.fonts.add(font);
+          });
+        });
+      }
+    }
+
+    if (
+      ("matchMedia" in window && window.matchMedia("(prefers-reduced-motion: reduce)").matches) ||
+      (navigator.connection && navigator.connection.saveData) ||
+      (navigator.connection && (navigator.connection.effectiveType === "slow-2g" || navigator.connection.effectiveType === "2g"))
+    ) {
+      // do nothing
+    } else {
+      loadFonts();
+    }
+  </script>
+</head>
+
+<body>
+
+  <header class="header" id="header">
+    <nav class="header__nav">
+      <ul class="nav-list">
+        <li class="nav-list__item"><a class="nav-list__link" href="/">Projects</a></li>
+        <li class="nav-list__item"><a class="nav-list__link" href="/about/">About</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__title">Orçun Yazıcı</div>
+  </header>
+
+  <main class="project-page">
+    <div class="constrain">
+
+      <h1>Nomadic Settlements</h1>
+
+      <table>
+        <tr>
+          <td><strong>_semester</strong></td>
+          <td>International MSc in Architecture: Resilient & Sustainable Strategies
+(KU Leuven, Sint Lucas in Ghent) / first semester workshop</td>
+        </tr>
+        <tr>
+          <td><strong>_year</strong></td>
+          <td>2018</td>
+        </tr>
+		<tr>
+          <td><strong>_location</strong></td>
+          <td>Ghent, Belgium</td>
+        </tr>
+        <tr>
+          <td><strong>_author</strong></td>
+          <td>Alberto Bovo, Endri D'Berberi, Eduardo Dugaich, Giulia Malley, Orçun Yazıcı</td>
+        </tr>
+      </table>
+
+      <p class="project-content">
+        <i>Contradictory trends of strong borders and extensive nomadic lifestyle, clash to create a reality
+		where a new transnational system (Loop) facilitates a movement in between borders. It is maintained by
+		and provides for nomadic people who need to constantly move to develop their identity. This global system
+		will be tied to cities through stations that are gateways between nomadic and non-nomadic realities. </i> <br />
+		<br />
+		In a projected future, year 2040, there will be tight administrative borders combined with an extensive
+	   amount nomadic shifts (people who constantly live on the move), generating an independent system called
+	   “nomadic settlements”.  This system will initially be utilized by the people who were refused the right
+	   to move. Hence, denied the opportunity to develop. Namely Loop, this independent system will be available
+	   to future nomads, all those general people who will be attracted by the idea of life on the move.
+	   It facilitates borderless movement, due to the fact that these people will never reach their “final destination”,
+	   therefore they won’t be stopped by any administrative borders. Its structure is inspired by an electronic
+	   circuit, in which components work as stations and flow as impulses. Several stations arranged around the
+	   world will provide the modern nomads with specific amenities (e.g. cities that are already following this
+	   trend: London Banking, L.A. Technology, New York Law and Ghent Education). In the microsystem of Ghent,
+	   the station of Ghent Sint Pieters will be a catalyst around facilities. In this scenario, nomads will be
+	   provided the basic needs to stay in the city for a short period of time, in order to develop themselves by
+	   using the infrastructure that the city already provides, such as universities, research centers, etc. Basic
+	   needs will be supplied by spaces that are already abandoned by the actual society. These vacancies would
+	   then be used for the temporary character of the future nomads, redefining their identity. Surrounded by and
+	   related with vacancies, the St Pieters station is considered to be the only space in the city that will
+	   maintain constant activity. The station is projected to stand as a symbol of timelessness and never
+	   become vacant.
+      </p>
+	  
+      <img src="1_nomadic settlements - circuit-like structure.jpg"/>
+
+      <img src="4_gif-min station ghent.gif"/>
+
+      <img src="5_6_7.jpg"/>
+
+      <img src="8_traces left behind.jpg"/>
+
+      <img src="9_thresholds.jpg"/>   
+
+	  <img src="10_collage 6.jpg"/>
+
+	  <img src="11_collage 7.jpg"/>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <nav class="footer__nav">
+      <ul class="nav-list">
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="mailto:orcun.yazici@gmail.com">E-Mail</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="https://www.facebook.com/orcunnyazici" target="_blank">Facebook</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="https://instagram.com/orcunnyazici" target="_blank">Instagram</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="footer__copyright">
+      Copyright &copy; 2018-2019 Orçun Yazıcı.<br />
+      All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
