@@ -1,43 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="author" content="Orçun Yazıcı">
   <meta name="email" content="orcun.yazici@gmail.com">
-  <title>Project 1</title>
-  <link rel="stylesheet" href="../styles.css">
+
+  <title>Orçun Yazıcı | About</title>
+
+  <link rel="preload" as="font" href="/font/Oswald-ExtraLight-subset.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/font/Oswald-SemiBold-subset.woff2" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="/styles.css">
+
+  <!-- Font loading -->
+  <script>
+    function loadFonts() {
+      if ("fonts" in document) {
+        var font = new FontFace(
+          "Oswald",
+          "url(/font/Oswald-ExtraLight-subset.woff2) format('woff2'), url(/font/Oswald-ExtraLight-subset.woff) format('woff')",
+          { weight: "200" }
+        );
+
+        var fontBold = new FontFace(
+          "Oswald",
+          "url(/font/Oswald-SemiBold-subset.woff2) format('woff2'), url(/font/Oswald-SemiBold-subset.woff) format('woff')",
+          { weight: "600" }
+        );
+
+        Promise.all([
+          font.load(),
+          fontBold.load()
+        ]).then(function (loadedFonts) {
+
+          // Render them at the same time
+          loadedFonts.forEach(function (font) {
+            document.fonts.add(font);
+          });
+        });
+      }
+    }
+
+    if (
+      ("matchMedia" in window && window.matchMedia("(prefers-reduced-motion: reduce)").matches) ||
+      (navigator.connection && navigator.connection.saveData) ||
+      (navigator.connection && (navigator.connection.effectiveType === "slow-2g" || navigator.connection.effectiveType === "2g"))
+    ) {
+      // do nothing
+    } else {
+      loadFonts();
+    }
+  </script>
 </head>
 
 <body>
 
-<header class="site-menu">
-  <nav>
-    <ul>
-      <li><a href="/">PROJECTS</a></li>
-      <li><a href="/about/"><strong>ABOUT</strong></a></li>
-      <li><a href="/#contact">CONTACT</a></li>
-    </ul>
-  </nav>
-  <div class="title">Orçun Yazıcı</div>
-</header>
+  <header class="header" id="header">
+    <nav class="header__nav">
+      <ul class="nav-list">
+        <li class="nav-list__item"><a class="nav-list__link" href="/">Projects</a></li>
+        <li class="nav-list__item"><strong>About</strong></li>
+      </ul>
+    </nav>
 
-<main class="project-page">
-  <h1>About</h1>
+    <div class="header__title">Orçun Yazıcı</div>
+  </header>
 
-  <p class="project-content">
-    hede
-  </p>
+  <main class="project-page">
+    <div class="constrain">
 
-  <p class="project-content">
-    hodo
-  </p>
+      <div id="about-lhs">
+	Hi, my name is Orçun and I obtained Bachelor of Architecture
+        from METU (Middle East Technical University) in Turkey. I am
+        currently studying International MSc in Sustainable and
+        Resilient Architecture at KU Leuven (Sint-Lucas in Ghent,
+        Belgium). I hope as you look through this website you can get
+        a better understanding of my works and my approach to
+        architecture. Hopefully, you will also find some
+        inspiration. Feel free to contact me!
+      </div>
 
-</main>
+      <div id="about-rhs">
+	<img src="photo.jpg"/>
+      </div>
 
-<footer>
-  Copyright &copy; 2018 Orçun Yazıcı.<br/>
-  All rights reserved.
-</footer>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <nav class="footer__nav">
+      <ul class="nav-list">
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="mailto:orcun.yazici@gmail.com">E-Mail</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="https://www.facebook.com/orcunnyazici" target="_blank">Facebook</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="https://instagram.com/orcunnyazici" target="_blank">Instagram</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="footer__copyright">
+      Copyright &copy; 2018-2019 Orçun Yazıcı.<br />
+      All rights reserved.
+    </div>
+  </footer>
 
 </body>
 </html>
