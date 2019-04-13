@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="Orçun Yazıcı">
+  <meta name="email" content="orcun.yazici@gmail.com">
+
+  <title>Orçun Yazıcı | Project 2</title>
+
+  <link rel="preload" as="font" href="/font/Oswald-ExtraLight-subset.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/font/Oswald-SemiBold-subset.woff2" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="/styles.css">
+
+  <!-- Font loading -->
+  <script>
+    function loadFonts() {
+      if ("fonts" in document) {
+        var font = new FontFace(
+          "Oswald",
+          "url(/font/Oswald-ExtraLight-subset.woff2) format('woff2'), url(/font/Oswald-ExtraLight-subset.woff) format('woff')",
+          { weight: "200" }
+        );
+
+        var fontBold = new FontFace(
+          "Oswald",
+          "url(/font/Oswald-SemiBold-subset.woff2) format('woff2'), url(/font/Oswald-SemiBold-subset.woff) format('woff')",
+          { weight: "600" }
+        );
+
+        Promise.all([
+          font.load(),
+          fontBold.load()
+        ]).then(function (loadedFonts) {
+
+          // Render them at the same time
+          loadedFonts.forEach(function (font) {
+            document.fonts.add(font);
+          });
+        });
+      }
+    }
+
+    if (
+      ("matchMedia" in window && window.matchMedia("(prefers-reduced-motion: reduce)").matches) ||
+      (navigator.connection && navigator.connection.saveData) ||
+      (navigator.connection && (navigator.connection.effectiveType === "slow-2g" || navigator.connection.effectiveType === "2g"))
+    ) {
+      // do nothing
+    } else {
+      loadFonts();
+    }
+  </script>
+</head>
+
+<body>
+
+  <header class="header" id="header">
+    <nav class="header__nav">
+      <ul class="nav-list">
+        <li class="nav-list__item"><a class="nav-list__link" href="/">Projects</a></li>
+        <li class="nav-list__item"><a class="nav-list__link" href="/about/">About</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__title">Orçun Yazıcı</div>
+  </header>
+
+  <main class="project-page">
+    <div class="constrain">
+
+      <h1>Vision of Nature /a cultural, social and recreational niche in Antalya</h1>
+
+      <table>
+        <tr>
+          <td><strong>_university</strong></td>
+          <td>METU, Turkey</td>
+        </tr>
+        <tr>
+          <td><strong>_semester</strong></td>
+          <td>BSc in Architecture, 4th year design studio</td>
+        </tr>		
+        <tr>
+          <td><strong>_year</strong></td>
+          <td>2018</td>
+        </tr>
+		<tr>
+          <td><strong>_location</strong></td>
+          <td>Zonguldak, Turkey</td>
+        </tr>
+        <tr>
+          <td><strong>_author(s)</strong></td>
+          <td>Orçun Yazıcı</td>
+        </tr>
+      </table>
+
+      <hr style="border: 0.5px solid#FF5347;" />
+
+      <br></br>
+	  <p align="justify" class="project-content">
+        Zonguldak was a pioneer city of the industrialization in Turkey. Today urban memory of coal mining and
+		industry, which is the origin of the city, is getting lost day by day. Industrialization is known as
+		getting away from nature. Since the site is located on former coal minei which has industrial typologies.
+		'Biophilia' is a project that searches for an intermediary concept that brings nature and industry
+		together. In addition to that it works as an earth sciences institute that serves both local residents
+		and sightseers who come temporarily or permanently. For the preservation of the industrial heritage,
+		existing building are protected and renovated. Paths that go around existing structures provide and support
+		the interaction between industrial heritage and people. Architectural details and structure of the project
+		inspired by the site's local elements which are also the reminders of urban memory. Diagonal connections
+		of coal mine structures create the main steel bearer idea of the project. Historic mine elevators form
+		the circulation cores of the building. 'Biophilia' is a living project that preserves past and responds
+		to future needs.
+      </p>
+	  
+      <img src="1-site-images.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Site Images
+	  </i></font></center>
+	  </figcaption>
+
+      <br></br>
+	  <img src="2-site-plan.jpg"/>
+      <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Site Plan
+	  </i></font></center>
+	  </figcaption>
+	  
+	  <br></br>
+	  <img src="3-typologies.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Typologies
+	  </i></font></center>
+	  </figcaption>
+	  
+	  <br></br>
+	  <img src="4-buildings.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Housing Unit _ Education
+	  </i></font></center>
+	  </figcaption>
+	  
+	  <br></br>
+	  <img src="5-buildings.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Museum _ Conference Hall _ Library
+	  </i></font></center>
+	  </figcaption>
+	  
+	  <br></br>
+	  <img src="6-units.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Housing Types
+	  </i></font></center>
+	  </figcaption>
+	  
+	  <br></br>
+	  <img src="7-render.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Housing
+	  </i></font></center>
+	  </figcaption>
+	  
+	  <br></br>
+	  <img src="8-render.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Museum _ Conference Hall _ Library
+	  </i></font></center>
+	  </figcaption>
+	  
+	  <br></br>
+	  <img src="9-render.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Housing
+	  </i></font></center>
+	  </figcaption>
+	  
+	  <br></br>
+	  <img src="10-plan.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Plans
+	  </i></font></center>
+	  </figcaption>
+	  
+	  <br></br>
+	  <img src="11-exploded.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Exploded Unit
+	  </i></font></center>
+	  </figcaption>
+	  
+	  <br></br>
+	  <img src="12-section.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Section
+	  </i></font></center>
+	  </figcaption>
+	  
+	  <br></br>
+	  <img src="13-render.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Nature and Structure
+	  </i></font></center>
+	  </figcaption>
+	  
+	  <br></br>
+	  <img src="14-model.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Physical Model
+	  </i></font></center>
+	  </figcaption>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <nav class="footer__nav">
+      <ul class="nav-list">
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="mailto:orcun.yazici@gmail.com">E-Mail</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="https://www.facebook.com/orcunnyazici" target="_blank">Facebook</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="https://instagram.com/orcunnyazici" target="_blank">Instagram</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="footer__copyright">
+      Copyright &copy; 2018-2019 Orçun Yazıcı.<br />
+      All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>

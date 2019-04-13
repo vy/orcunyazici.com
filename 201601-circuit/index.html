@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="Orçun Yazıcı">
+  <meta name="email" content="orcun.yazici@gmail.com">
+
+  <title>Orçun Yazıcı | Project 2</title>
+
+  <link rel="preload" as="font" href="/font/Oswald-ExtraLight-subset.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/font/Oswald-SemiBold-subset.woff2" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="/styles.css">
+
+  <!-- Font loading -->
+  <script>
+    function loadFonts() {
+      if ("fonts" in document) {
+        var font = new FontFace(
+          "Oswald",
+          "url(/font/Oswald-ExtraLight-subset.woff2) format('woff2'), url(/font/Oswald-ExtraLight-subset.woff) format('woff')",
+          { weight: "200" }
+        );
+
+        var fontBold = new FontFace(
+          "Oswald",
+          "url(/font/Oswald-SemiBold-subset.woff2) format('woff2'), url(/font/Oswald-SemiBold-subset.woff) format('woff')",
+          { weight: "600" }
+        );
+
+        Promise.all([
+          font.load(),
+          fontBold.load()
+        ]).then(function (loadedFonts) {
+
+          // Render them at the same time
+          loadedFonts.forEach(function (font) {
+            document.fonts.add(font);
+          });
+        });
+      }
+    }
+
+    if (
+      ("matchMedia" in window && window.matchMedia("(prefers-reduced-motion: reduce)").matches) ||
+      (navigator.connection && navigator.connection.saveData) ||
+      (navigator.connection && (navigator.connection.effectiveType === "slow-2g" || navigator.connection.effectiveType === "2g"))
+    ) {
+      // do nothing
+    } else {
+      loadFonts();
+    }
+  </script>
+</head>
+
+<body>
+
+  <header class="header" id="header">
+    <nav class="header__nav">
+      <ul class="nav-list">
+        <li class="nav-list__item"><a class="nav-list__link" href="/">Projects</a></li>
+        <li class="nav-list__item"><a class="nav-list__link" href="/about/">About</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__title">Orçun Yazıcı</div>
+  </header>
+
+  <main class="project-page">
+    <div class="constrain">
+
+      <h1>Circuit /architecture that heals</h1>
+
+      <table>
+        <tr>
+          <td><strong>_university</strong></td>
+          <td>METU, Turkey</td>
+        </tr>
+        <tr>
+          <td><strong>_semester</strong></td>
+          <td>BSc in Architecture, 3rd year design studio</td>
+        </tr>		
+        <tr>
+          <td><strong>_year</strong></td>
+          <td>2016</td>
+        </tr>
+		<tr>
+          <td><strong>_location</strong></td>
+          <td>Saraçoğlu Mahallesi, Ankara, Turkey</td>
+        </tr>
+        <tr>
+          <td><strong>_author(s)</strong></td>
+          <td>Orçun Yazıcı</td>
+        </tr>
+      </table>
+
+      <hr style="border: 0.5px solid#FF5347;" />
+
+      <br></br>
+	  <p align="justify" class="project-content">
+        Saraçoğlu Quarter, an example of architecture in Republic Period, is in bad condition because of lack of care
+      and misuse. Purpose of 'Circuit' project is to protect the heritage of neighbourhood both architecturally and
+	  socially while creating a space that affects itself and its whole surrounding which are called 'components'. In
+	  this manner, Saraçoğlu Quarter is going to be considered as a 'core (motherboard)' part of the city that serves
+	  as a microcosm for the whole city.
+	  <br></br>
+	  The Quarter has an unique location and identical history with full of conflicts which is still discussed.
+	  Technological scenario approach is the key part of the project and stands for an accessible and sustainable
+	  future which also preserves the site's history. To achieve educational approach for the city, proposal is designed
+	  as an extension building of Namık Kemal Primary School.
+      </p>
+	  
+      <img src="1-analysis.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Site Analysis
+	  </i></font></center>
+	  </figcaption>
+
+      <br></br>
+	  <img src="2-concept.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Concept Diagram
+	  </i></font></center>
+	  </figcaption>
+	  
+	  <br></br>
+	  <img src="3-photos.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Concept Model
+	  </i></font></center>
+	  </figcaption>
+
+      <br></br>
+	  <img src="4-process.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Study of Spatial Distribution
+	  </i></font></center>
+	  </figcaption>
+
+      <br></br>
+	  <img src="5-sections.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Vertical Sections
+	  </i></font></center>
+	  </figcaption>
+
+      <br></br>
+	  <img src="6-diagram.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Site as a Circuit _ Placing Components /organize circulation _ Create Connection _ Define Structure
+	  </i></font></center>
+	  </figcaption>
+
+      <br></br>
+	  <img src="7-render.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Relation of Different Interfaces
+	  </i></font></center>
+	  </figcaption>
+
+      <br></br>
+	  <img src="8-site-plan.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Site Plan
+	  </i></font></center>
+	  </figcaption>
+
+      <br></br>
+	  <img src="9-plans.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Floor Plans
+	  </i></font></center>
+	  </figcaption>
+
+      <br></br>
+	  <img src="10-section.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Section AA'
+	  </i></font></center>
+	  </figcaption>
+
+      <br></br>
+	  <img src="11-model.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Physical Model
+	  </i></font></center>
+	  </figcaption>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <nav class="footer__nav">
+      <ul class="nav-list">
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="mailto:orcun.yazici@gmail.com">E-Mail</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="https://www.facebook.com/orcunnyazici" target="_blank">Facebook</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="https://instagram.com/orcunnyazici" target="_blank">Instagram</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="footer__copyright">
+      Copyright &copy; 2018-2019 Orçun Yazıcı.<br />
+      All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>

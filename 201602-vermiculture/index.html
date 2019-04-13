@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="Orçun Yazıcı">
+  <meta name="email" content="orcun.yazici@gmail.com">
+
+  <title>Orçun Yazıcı | Project 2</title>
+
+  <link rel="preload" as="font" href="/font/Oswald-ExtraLight-subset.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/font/Oswald-SemiBold-subset.woff2" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="/styles.css">
+
+  <!-- Font loading -->
+  <script>
+    function loadFonts() {
+      if ("fonts" in document) {
+        var font = new FontFace(
+          "Oswald",
+          "url(/font/Oswald-ExtraLight-subset.woff2) format('woff2'), url(/font/Oswald-ExtraLight-subset.woff) format('woff')",
+          { weight: "200" }
+        );
+
+        var fontBold = new FontFace(
+          "Oswald",
+          "url(/font/Oswald-SemiBold-subset.woff2) format('woff2'), url(/font/Oswald-SemiBold-subset.woff) format('woff')",
+          { weight: "600" }
+        );
+
+        Promise.all([
+          font.load(),
+          fontBold.load()
+        ]).then(function (loadedFonts) {
+
+          // Render them at the same time
+          loadedFonts.forEach(function (font) {
+            document.fonts.add(font);
+          });
+        });
+      }
+    }
+
+    if (
+      ("matchMedia" in window && window.matchMedia("(prefers-reduced-motion: reduce)").matches) ||
+      (navigator.connection && navigator.connection.saveData) ||
+      (navigator.connection && (navigator.connection.effectiveType === "slow-2g" || navigator.connection.effectiveType === "2g"))
+    ) {
+      // do nothing
+    } else {
+      loadFonts();
+    }
+  </script>
+</head>
+
+<body>
+
+  <header class="header" id="header">
+    <nav class="header__nav">
+      <ul class="nav-list">
+        <li class="nav-list__item"><a class="nav-list__link" href="/">Projects</a></li>
+        <li class="nav-list__item"><a class="nav-list__link" href="/about/">About</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__title">Orçun Yazıcı</div>
+  </header>
+
+  <main class="project-page">
+    <div class="constrain">
+
+      <h1>Vermiculture /seaside housing</h1>
+
+      <table>
+        <tr>
+          <td><strong>_university</strong></td>
+          <td>METU, Turkey</td>
+        </tr>
+        <tr>
+          <td><strong>_semester</strong></td>
+          <td>BSc in Architecture, 3rd year design studio</td>
+        </tr>		
+        <tr>
+          <td><strong>_year</strong></td>
+          <td>2016</td>
+        </tr>
+		<tr>
+          <td><strong>_location</strong></td>
+          <td>Çeşme, İzmir, Turkey</td>
+        </tr>
+        <tr>
+          <td><strong>_author(s)</strong></td>
+          <td>Orçun Yazıcı</td>
+        </tr>
+      </table>
+
+      <hr style="border: 0.5px solid#FF5347;" />
+
+      <br></br>
+	  <p align="justify" class="project-content">
+      Proposal's starting point is to create a sustainable housing that benefits from the regional characteristics of
+	  the site. Every year, approximately one third of the food production in the world is lost or wasted, and it is
+	  roughly equal to 1.3 billion tones. Household food waste covers the important percentage of this situation.
+	  <br></br>
+	  'Vermiculture' is the cultivation of earthworms, using worms to convert organic waste into fertilizer. Project's
+	  aim is to integrate organic waste-fertilizer process into housing infrastructure with the underground pumping
+	  systems. As a result, while reducing food waste, agricultural fields of Çeşme can benefit from the fertilizer
+	  produced by worms.
+      </p>
+	  
+      <img src="1-analysis.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Worm Composting Around İzmir _ Wind Analysis
+	  </i></font></center>
+	  </figcaption>
+
+      <br></br>
+	  <img src="2-analysis.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Waste Food Percentage in Households _ Recycling Process
+	  </i></font></center>
+	  </figcaption>
+	  
+	  <br></br>
+	  <img src="3-site-plan.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Site Plan
+	  </i></font></center>
+	  </figcaption>
+
+      <br></br>
+	  <img src="4-typology.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Housing Typologies
+	  </i></font></center>
+	  </figcaption>
+
+      <br></br>
+	  <img src="5-diagram.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Exploded Unit
+	  </i></font></center>
+	  </figcaption>
+
+      <br></br>
+	  <img src="6-section.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Building Section
+	  </i></font></center>
+	  </figcaption>
+
+      <br></br>
+	  <img src="7-render.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Back View of a Housing Connection
+	  </i></font></center>
+	  </figcaption>
+
+      <br></br>
+	  <img src="8-images.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Physical Model
+	  </i></font></center>
+	  </figcaption>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <nav class="footer__nav">
+      <ul class="nav-list">
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="mailto:orcun.yazici@gmail.com">E-Mail</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="https://www.facebook.com/orcunnyazici" target="_blank">Facebook</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="https://instagram.com/orcunnyazici" target="_blank">Instagram</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="footer__copyright">
+      Copyright &copy; 2018-2019 Orçun Yazıcı.<br />
+      All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>

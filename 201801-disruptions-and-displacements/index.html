@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="Orçun Yazıcı">
+  <meta name="email" content="orcun.yazici@gmail.com">
+
+  <title>Orçun Yazıcı | Project 2</title>
+
+  <link rel="preload" as="font" href="/font/Oswald-ExtraLight-subset.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/font/Oswald-SemiBold-subset.woff2" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="/styles.css">
+
+  <!-- Font loading -->
+  <script>
+    function loadFonts() {
+      if ("fonts" in document) {
+        var font = new FontFace(
+          "Oswald",
+          "url(/font/Oswald-ExtraLight-subset.woff2) format('woff2'), url(/font/Oswald-ExtraLight-subset.woff) format('woff')",
+          { weight: "200" }
+        );
+
+        var fontBold = new FontFace(
+          "Oswald",
+          "url(/font/Oswald-SemiBold-subset.woff2) format('woff2'), url(/font/Oswald-SemiBold-subset.woff) format('woff')",
+          { weight: "600" }
+        );
+
+        Promise.all([
+          font.load(),
+          fontBold.load()
+        ]).then(function (loadedFonts) {
+
+          // Render them at the same time
+          loadedFonts.forEach(function (font) {
+            document.fonts.add(font);
+          });
+        });
+      }
+    }
+
+    if (
+      ("matchMedia" in window && window.matchMedia("(prefers-reduced-motion: reduce)").matches) ||
+      (navigator.connection && navigator.connection.saveData) ||
+      (navigator.connection && (navigator.connection.effectiveType === "slow-2g" || navigator.connection.effectiveType === "2g"))
+    ) {
+      // do nothing
+    } else {
+      loadFonts();
+    }
+  </script>
+</head>
+
+<body>
+
+  <header class="header" id="header">
+    <nav class="header__nav">
+      <ul class="nav-list">
+        <li class="nav-list__item"><a class="nav-list__link" href="/">Projects</a></li>
+        <li class="nav-list__item"><a class="nav-list__link" href="/about/">About</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__title">Orçun Yazıcı</div>
+  </header>
+
+  <main class="project-page">
+    <div class="constrain">
+
+      <h1>Disruptions and Displacements /architecture of fragmented memories</h1>
+
+      <table>
+        <tr>
+          <td><strong>_university</strong></td>
+          <td>KU Leuven (Sint-Lucas in Ghent), Belgium</td>
+        </tr>
+        <tr>
+          <td><strong>_semester</strong></td>
+          <td>International MSc in Architecture (Resilient and Sustainable Strategies), 1st semester design studio</td>
+        </tr>		
+        <tr>
+          <td><strong>_year</strong></td>
+          <td>2019</td>
+        </tr>
+		<tr>
+          <td><strong>_location</strong></td>
+          <td>Dendermonde, Belgium</td>
+        </tr>
+        <tr>
+          <td><strong>_author(s)</strong></td>
+          <td>Orçun Yazıcı</td>
+        </tr>
+      </table>
+
+      <hr style="border: 0.5px solid#FF5347;" />
+
+      <br></br>
+	  <p align="justify" class="project-content">
+        How can the collected memories meet each other in a new arrangement? What differences does this rearrangement
+		make on the identity of the citizens?</br>
+		<br>The project explores the memories of Dendermonde that are disappeared or displaced from people's minds.
+		What happens if you imagine a book with all the memories and throw it over the city? What kind of definitions
+		does this provocative act create?</br>
+		<br>Superimposition of the autonomous fragments creates a dialogue between layers due to juxtaposition
+		and call for a different kind of interaction. The intention is that by offering a series of versatile
+		infrastructures that are strategically located, new stories will develop spontaneously. Intense
+		experimentation with dismantling process of Kazerne and the collection of the fragments look for the
+		critical engagement with social and spatial conditions in order to advance a new generation of architecture.</br>
+      </p>
+	  
+      <img src="1-collage.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Initial Drawing
+	  </i></font></center>
+	  </figcaption>
+
+      <br></br>
+	  <img src="2-site.jpg"/>
+      <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Site
+	  </i></font></center>
+	  </figcaption>
+	  
+	  <br></br>
+	  <img src="3-memory-map.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Memory Map
+	  </i></font></center>
+	  </figcaption>
+	  
+	  <br></br>
+	  <img src="4-superimposition.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Fragments _ Combinations
+	  </i></font></center>
+	  </figcaption>
+	  
+	  <br></br>
+	  <img src="5-image.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Memory Book
+	  </i></font></center>
+	  </figcaption>
+	  
+	  <br></br>
+	  <img src="6-pervasive-centrality.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Pervasive Centrality
+	  </i></font></center>
+	  </figcaption>
+	  
+	  <br></br>
+	  <img src="7-kazerne.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Kazerne Study
+	  </i></font></center>
+	  </figcaption>
+	  
+	  <br></br>
+	  <img src="8-structure.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Structure Study
+	  </i></font></center>
+	  </figcaption>
+	  
+	  <br></br>
+	  <img src="9-site.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Site
+	  </i></font></center>
+	  </figcaption>
+	  
+	  <br></br>
+	  <img src="10-site.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Site Oblique
+	  </i></font></center>
+	  </figcaption>
+	  
+	  <br></br>
+	  <img src="11-atlas.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Atlas of Fragments
+	  </i></font></center>
+	  </figcaption>
+	  
+	  <br></br>
+	  <img src="12-structures.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Structures and Events _1
+	  </i></font></center>
+	  </figcaption>
+	  
+	  <br></br>
+	  <img src="13-structures.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Structures and Events _2
+	  </i></font></center>
+	  </figcaption>
+	  
+	  <br></br>
+	  <img src="14-exploded.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Exploded Structure
+	  </i></font></center>
+	  </figcaption>
+	  
+	  <br></br>
+	  <img src="15-exploded.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Exploded Structures
+	  </i></font></center>
+	  </figcaption>
+	  
+	  <br></br>
+	  <img src="16-horse-parade.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  the Bayard Steed and the Giants of the Guilds
+	  </i></font></center>
+	  </figcaption>
+	  
+	  <br></br>
+	  <img src="17-render.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Changing Definitions
+	  </i></font></center>
+	  </figcaption>
+	  
+	  <br></br>
+	  <img src="18-render.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Events
+	  </i></font></center>
+	  </figcaption>
+	  
+	  <br></br>
+	  <img src="19-render.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Participitation
+	  </i></font></center>
+	  </figcaption>
+	  
+	  <br></br>
+	  <img src="20-model.jpg"/>
+	  <figcaption>
+	  <center><i>
+	  <font color="#A9A9A9">
+	  Physical Model
+	  </i></font></center>
+	  </figcaption>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <nav class="footer__nav">
+      <ul class="nav-list">
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="mailto:orcun.yazici@gmail.com">E-Mail</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="https://www.facebook.com/orcunnyazici" target="_blank">Facebook</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="https://instagram.com/orcunnyazici" target="_blank">Instagram</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="footer__copyright">
+      Copyright &copy; 2018-2019 Orçun Yazıcı.<br />
+      All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
